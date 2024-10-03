@@ -28,11 +28,17 @@ if  (sever_email.includes(user_email)) {
 let player = prompt(Math.floor(Math.random() * 10));
 let bank = prompt(Math.floor(Math.random() * 10));
 
- if (player > bank) {
-    console.log('il giocatore ha vinto');   
-} else if (player < bank) {
-    console.log('il giocatore ha perso');
-} 
+ if (player < bank) {
+    console.log('il giocatore ha perso');   
+} else if (player > bank) {
+    console.log('il giocatore ha vinto');
+    
+} else {
+    console.log('parità');
+    
+}
+
+
 
    
     
