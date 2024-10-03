@@ -25,20 +25,34 @@ if  (sever_email.includes(user_email)) {
 //Generare un numero random da 1 a 6, sia per il giocatore sia per il computer. Stabilire il vincitore, in base a chi fa il punteggio più alto.
 //Prima di partire a scrivere codice poniamoci qualche domanda: Che ci sia un array da qualche parte? Se dobbiamo confrontare qualcosa che "cosa" ci serve?
 
-let player = prompt(Math.floor(Math.random() * 10));
-let bank = prompt(Math.floor(Math.random() * 10));
 
- if (player < bank) {
-    console.log('il giocatore ha perso');   
-} else if (player > bank) {
-    console.log('il giocatore ha vinto');
+
+let player = Math.floor((Math.random()*6) +1);
+prompt('clicca per tirare il dado')
+console.log(player);
+
+let bank = Math.floor((Math.random()*6) +1);
+prompt('clicchi per tirare il dado')
+console.log(bank);
+
+
+if (bank > player) {
+    console.log("il banco ha vinto");
     
-} else {
-    console.log('parità');
     
 }
 
+else if (player > bank) {
+    console.log("il giocatore ha vinto");
+    
 
+} 
+
+else {
+    console.log("pareggio");
+    
+    
+}
 
    
     
